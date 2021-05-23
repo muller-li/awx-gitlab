@@ -18,14 +18,14 @@ gitlab_create_self_signed_cert: "true"
 gitlab_self_signed_cert_subj: "/C=FR/ST=Ile-de-France/L=Paris/O=Twentyone/CN={{ gitlab_domain }}"
 
 # LDAP Configuration.
-gitlab_ldap_enabled: "false"
-gitlab_ldap_host: "example.com"
+gitlab_ldap_enabled: "true"
+gitlab_ldap_host: "srv-ad01.twentyone.lan"
 gitlab_ldap_port: "389"
 gitlab_ldap_uid: "sAMAccountName"
 gitlab_ldap_method: "plain"
-gitlab_ldap_bind_dn: "CN=Username,CN=Users,DC=example,DC=com"
-gitlab_ldap_password: "password"
-gitlab_ldap_base: "DC=example,DC=com"
+gitlab_ldap_bind_dn: "CN=bind,CN=Users,DC=twentyone,DC=lan"
+gitlab_ldap_password: "Password123456789"
+gitlab_ldap_base: "OU=USERS,OU=TW,DC=twentyone,DC=lan"
 
 # SMTP Configuration
 gitlab_smtp_enable: "false"
